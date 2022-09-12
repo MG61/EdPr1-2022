@@ -19,7 +19,7 @@
 
 <h1>Калькулятор</h1>
 
-<form action="/result" method="get">
+<form action="/data" method="get">
     <label for="a">Введите a:</label>
     <input type="text" name="a" id="a" required style="margin-bottom: 20px"><br>
 
@@ -36,7 +36,7 @@
     <br>
     <input type="submit" name="Выполнить" value="Выполнить" style="margin-bottom: 20px">
     <h3>Итог:</h3>
-    <p th:text="${result}"/>
+    <p th:text="${data}"/>
     <a href="/">Вернуться</a>
 </form>
 </body>

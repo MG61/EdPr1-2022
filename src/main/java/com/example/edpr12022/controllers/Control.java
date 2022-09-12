@@ -18,33 +18,33 @@ public class Control {
         return "get";
     }
 
-    @GetMapping("/result")
+    @GetMapping("/data")
     public String GetController(@RequestParam(value = "a", required = false) int a,
                                 @RequestParam(value = "b", required = false) int b,
                                 @RequestParam(value = "rez", required = false) String rez, Model model) {
 
-        double result = 0;
+        double data = 0;
         switch (rez) {
             case "+":
-                result = a + b;
+                data = a + b;
                 break;
 
             case "-":
-                result = a - b;
+                data = a - b;
                 break;
 
             case "*":
-                result = a * b;
+                data = a * b;
                 break;
 
             case "/":
-                result = a / b;
+                data = a / b;
                 break;
             default:
-                result = 0;
+                data = 0;
                 break;
         }
-        model.addAttribute("result", result);
+        model.addAttribute("data", data);
         return "get";
 
     }
@@ -64,28 +64,28 @@ public class Control {
         model.addAttribute("rez", rez);
 
 
-        double result;
+        double data;
         switch (rez) {
             case "+":
-                result = a + b;
+                data = a + b;
                 break;
 
             case "-":
-                result = a - b;
+                data = a - b;
                 break;
 
             case "*":
-                result = a * b;
+                data = a * b;
                 break;
 
             case "/":
-                result = a / b;
+                data = a / b;
                 break;
             default:
-                result = 0;
+                data = 0;
                 break;
         }
-        model.addAttribute("result", result);
+        model.addAttribute("data", data);
         return "post";
 
     }
